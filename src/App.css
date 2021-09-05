@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #15202b;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.container {
+  width: 85vw;
+  background-color: #15202b;
+  padding: 0rem;
+}
+
+.container-login {
+  margin-top: 30vh;
+  text-align: center;
+  width: 85vw;
+  background-color: #15202b;
+  padding: 0rem;
+}
+
+.sign-in {
+  margin-top: 2rem;
+}
+
+nav.container {
+  width: 100vw;
+  background-color: #343a40;
+  padding: 0rem;
+}
+
+.navbar {
+  background: #343a40;
+  border-radius: 6px;
+}
+
+.navbar-nav {
+  margin: 1rem 0 1rem 1rem;
+}
+
+.nav-link {
+  margin-right: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+a.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.selected {
+  color: rgba(255, 255, 255, 1);
+}
+
+.tweetForm {
+  margin-top: 7rem;
+}
+
+.card {
+  background-color: #15202b;
+  border: 2px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form-control {
+  border-style: none;
+  background-color: #15202b;
+  color: #cccccc;
+  padding: 0;
+}
+
+.form-control:focus {
+  outline: none;
+  background-color: #15202b;
+  color: white;
+}
+
+textarea {
+  color: #cccccc;
+}
+
+.btn {
+  margin-bottom: 1rem;
+}
+
+.alert {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.tweet-header,
+.form-footer {
+  color: #6c757d;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.tweet {
+  background-color: #343a40;
+  font-size: 14px;
+  line-height: 16px;
+  border: #343a40;
+  border-radius: 6px;
+}
+
+.tweet-text {
+  color: #ffffff;
+}
+
+.profile {
+  margin-top: 7rem;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 42px;
+  margin-left: 0.5rem;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 1rem 0 0.5rem 0.5rem;
+}
+
+span {
+  color: #ffffff;
+  margin-left: 0.5rem;
+}
+
+.card-body-profile {
+  background-color: #15202b;
+  border: 2px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  nav.container {
+    width: 70vw;
+  }
+
+  .container {
+    width: 55vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  nav.container {
+    width: 45vw;
+  }
+
+  .container {
+    width: 30vw;
+  }
+}
