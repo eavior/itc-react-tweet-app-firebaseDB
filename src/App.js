@@ -6,6 +6,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import Login from "./components/Login";
 import TweetUI from "./components/TweetUI";
+import "firebase/storage";
 
 console.log(process.env.REACT_APP_API_KEY);
 
@@ -20,11 +21,14 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+// var storage = firebase.storage();
 
 function App() {
   const [authUser, setAuthUser] = useState(null);
+  const [authStorage, setAuthStorage] = useState(null);
   const login = async (authUser) => {
     setAuthUser(authUser);
+    setAuthStorage(firebase.storage());
     await firebase
       .firestore()
       .collection("users")
@@ -47,11 +51,12 @@ function App() {
     <AuthContext.Provider
       value={{
         authUser,
+        authStorage,
         login,
         logout: () => setAuthUser(null),
       }}>
       {!authUser && <Login />}
-      {authUser && <TweetUI authUser={authUser} />}
+      {authUser && <TweetUI authUser={authUser} authStorage={authStorage} />}
     </AuthContext.Provider>
   );
 }

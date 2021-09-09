@@ -11,9 +11,11 @@ import {
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { MyContext } from "../context/MyContext";
-import Profile from "./Profile";
+import ProfileUI from "./ProfileUI";
 import SignOut from "./SignOut";
 import { useState } from "react";
+import ProfilePicture from "./ProfilePicture";
+import ProfileName from "./ProfileName";
 
 const NavBar = () => {
   return (
@@ -26,15 +28,13 @@ const NavBar = () => {
           <NavLink
             className="nav-link"
             activeClassName="selected"
-            to="/profile"
-          >
+            to="/profile">
             Profile
           </NavLink>
           <NavLink
             className="nav-link"
             activeClassName="selected"
-            to="/sign_out"
-          >
+            to="/sign_out">
             Sign out
           </NavLink>
         </div>
@@ -44,7 +44,7 @@ const NavBar = () => {
 };
 
 const TweetUI = (props) => {
-  const { authUser } = props;
+  const { authUser, authStorage } = props;
   const [error, setError] = useState(null);
   const [currentUser] = useState(authUser.uid);
 
@@ -68,7 +68,10 @@ const TweetUI = (props) => {
               <TweetList />
             </Route>
             <Route path="/profile">
-              <Profile currentUser={authUser.uid}></Profile>
+              <ProfileUI authUser={authUser} authStorage={authStorage}>
+                {/* <ProfileName></ProfileName>
+                <ProfilePicture></ProfilePicture> */}
+              </ProfileUI>
             </Route>
             <Route path="/sign_out">
               <SignOut />

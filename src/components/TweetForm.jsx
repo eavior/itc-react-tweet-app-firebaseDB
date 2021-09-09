@@ -34,6 +34,7 @@ export default class TweetForm extends React.Component {
     this.setState({ loading: true });
     setTimeout(() => {
       if (!this.state.tweetText) return;
+      console.log("currentUser: " + currentUser);
       const item = {
         content: this.state.tweetText,
         userID: currentUser,
@@ -64,8 +65,7 @@ export default class TweetForm extends React.Component {
               className="card"
               onSubmit={(event) =>
                 this.handleSubmit(event, currentUser, onAddTweet)
-              }
-            >
+              }>
               <div className="card-body">
                 <textarea
                   className="form-control"
@@ -73,8 +73,7 @@ export default class TweetForm extends React.Component {
                   rows="3"
                   placeholder="What you have in mind..."
                   value={this.state.tweetText}
-                  onChange={(event) => this.handleChange(event)}
-                ></textarea>
+                  onChange={(event) => this.handleChange(event)}></textarea>
               </div>
               <div className="card-body form-footer">
                 {this.state.maxTweetLengthWarning &&
@@ -104,8 +103,7 @@ export default class TweetForm extends React.Component {
                       <span
                         className="spinner-border spinner-border-sm"
                         role="status"
-                        aria-hidden="true"
-                      ></span>{" "}
+                        aria-hidden="true"></span>{" "}
                       Loading ...
                     </button>
                   )}

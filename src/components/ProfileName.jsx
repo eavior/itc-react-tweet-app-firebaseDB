@@ -10,7 +10,7 @@ import "firebase/firestore";
 // Create a storage reference from our storage service
 // var storageRef = storage.ref();
 
-const Profile = (props) => {
+const ProfileName = (props) => {
   const [currentNickName, setCurrentNickName] = useState(null);
   const [newNickName, setNewNickName] = useState(null);
   const [redirect, setRedirect] = useState(null);
@@ -143,29 +143,8 @@ const Profile = (props) => {
           </div>
         </div>
       </form>
-      {/* <h3>Upload profile picture</h3>
-        <img src={user}></img>
-        <form
-          className="card-profile"
-          onSubmit={(file) => this.uploadBlob(file)}
-        >
-          <div className="card-body-profile">
-            <input
-              className="form-control"
-              name="text"
-              type="text"
-              rows="1"
-              value={this.state.value}
-              onChange={(event) => this.handleChange(event)}
-            />
-          </div>
-          <input type="file" id="myFile" name="filename"></input>
-          <div className="card-body tweet-header">
-            <button className="btn btn-primary">Upload</button>
-          </div>
-        </form> */}
     </div>
   );
 };
 
-export default Profile;
+export default ProfileName;
