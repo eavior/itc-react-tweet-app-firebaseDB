@@ -8,8 +8,6 @@ import Login from "./components/Login";
 import TweetUI from "./components/TweetUI";
 import "firebase/storage";
 
-console.log(process.env.REACT_APP_API_KEY);
-
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,

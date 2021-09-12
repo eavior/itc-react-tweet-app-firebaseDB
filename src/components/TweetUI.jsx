@@ -14,8 +14,6 @@ import { MyContext } from "../context/MyContext";
 import ProfileUI from "./ProfileUI";
 import SignOut from "./SignOut";
 import { useState } from "react";
-import ProfilePicture from "./ProfilePicture";
-import ProfileName from "./ProfileName";
 
 const NavBar = () => {
   return (
@@ -68,10 +66,9 @@ const TweetUI = (props) => {
               <TweetList />
             </Route>
             <Route path="/profile">
-              <ProfileUI authUser={authUser} authStorage={authStorage}>
-                {/* <ProfileName></ProfileName>
-                <ProfilePicture></ProfilePicture> */}
-              </ProfileUI>
+              <ProfileUI
+                authUser={authUser}
+                authStorage={authStorage}></ProfileUI>
             </Route>
             <Route path="/sign_out">
               <SignOut />
