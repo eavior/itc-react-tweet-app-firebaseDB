@@ -15,6 +15,8 @@ const Login = () => {
         // List of OAuth providers supported.
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        "microsoft.com",
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
       ],
       signInFlow: "popup",
       callbacks: {
@@ -28,6 +30,7 @@ const Login = () => {
           };
           authContext.login(authUser);
           console.log(authUser);
+          console.log(authresult.user);
           return false;
         },
       },
